@@ -1,0 +1,30 @@
+<html>
+<head>
+    
+    <title>{{pageTitle}} {{h.defaultPageTitle}}</title>
+    <link rel="stylesheet" href="/assets/css/template.css"/>
+</head>
+<body>
+<header>
+    <h1>Treinando NodeJs</h1>
+    {{#user}}
+        Olá, <a href="/profile">{{user.name}}</a>! 
+    {{/user}}
+    <hr/>
+    <ul>
+        {{#h.menu}}
+        <li><a href= "{{slug}}">{{name}}</a></li>
+        {{/h.menu}}
+    </ul>
+    <hr/>
+</header>
+
+{{#flashes}}
+        {{#sucess}}
+            <div  class="warning">{{.}} </div>
+        {{/sucess}}
+        {{#error}}
+            <div  class="warning">{{.}} </div>
+        {{/error}}
+    
+{{/flashes}}

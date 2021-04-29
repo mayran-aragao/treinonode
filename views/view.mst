@@ -1,0 +1,9 @@
+{{>header}}
+{{#post.photo}}
+        <img src="/midia/{{post.photo}}" width="200"/>
+{{/post.photo}}
+<h1>{{post.title}}</h1>
+
+<article>{{post.body}}</article>
+<hr/>
+<small>Tags: {{post.tags}}</small>
